@@ -10,11 +10,11 @@ steps:
         '--platform=linux/amd64',
         '.',
       ]
-  options:
-    logging: CLOUD_LOGGING_ONLY
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
         'push',
         'us-central1-docker.pkg.dev/tienda-microservices-427920/image-registry/auth-ms',
       ]
+  options:
+    logging: CLOUD_LOGGING_ONLY
